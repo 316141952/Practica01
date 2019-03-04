@@ -11,7 +11,7 @@ def suma_l (x) :
     
 def orden_l (x) :
     '''Ordena una lista de menor a mayor'''
-    for i in range(0,len(x)-1,1):
+    for i in range(len(x)-1,0,-1):
         for j in range(i) :
             if x[j]>x[j+1]: 
                 t = x[j]
