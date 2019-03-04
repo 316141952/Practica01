@@ -5,17 +5,17 @@ def suma_l (x) :
     '''Suma los elementos de una lista'''
     j = 0
     for i in x:
-        j = j + i
+        j = j + i #aquí va sumandos los elementos
     print j
 
     
 def orden_l (x) :
     '''Ordena una lista de menor a mayor'''
-    for i in range(len(x)-1,0,-1):
+    for i in range(len(x)-1,0,-1): #te da una lista volteada con los índices de la entrada
         for j in range(i) :
-            if x[j]>x[j+1]: 
-                t = x[j]
-                x[j] = x[j+1]
+            if x[j]>x[j+1]: #aquí compara los elementos uno por uno
+                t = x[j]    #y esto los intercambia si uno es mayor que el otro
+                x[j] = x[j+1] 
                 x[j+1] = t
     return (x)
 
@@ -23,8 +23,8 @@ def orden_l (x) :
 def max_l (x) :
     '''Te muestra el elemento máximo
 de una lista'''
-    orden_l(x)
-    n = x.pop()
+    orden_l(x) #ordena la lista de entrada
+    n = x.pop() #agarra el último elemento que será el máximo
     return n
 
 
@@ -32,7 +32,7 @@ def min_l (x) :
     '''Te muestra el elemento mínimo de
 una lista'''
     orden_l (x)
-    n = x.pop(0)
+    n = x.pop(0) #agarra el primer elemento que será el mínimo
     return n
 
 
